@@ -6,17 +6,13 @@
 
 ``` java
 class Solution {
-    public int getSecondLargest(int[] arr) {
-        // Code Here
-        
+    public int getSecondLargest(int[] arr) {        
         int n = arr.length;
         int f = 0, s = 0;
         
         if(n == 1)
-            return -1;
-            
-        
-            
+            return -1;           
+
         for(int i = 0; i < n; i++){
             if(arr[i] > f){
                 s = f;
@@ -66,8 +62,7 @@ class Solution {
 ```java
 class Solution {
     public void reverseArray(int arr[]) {
-        // code here
-        
+
         int left = 0;
         int right = (arr.length - 1);
         
@@ -109,10 +104,10 @@ class Solution {
 ## Day 5
 ### [Next Permutation(Medium)](https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/next-permutation5226)
 
-```javaclass Solution {
+```java
+public class Solution {
     void nextPermutation(int[] arr) {
-        // code here
-        
+
         int n = arr.length;
         int pivot = 0;
         int pivotIndex = 0;
@@ -163,7 +158,6 @@ class Solution {
 
 ```java
 class Solution {
-    // Function to find the majority elements in the array
     public List<Integer> findMajority(int[] nums) {
 
         int n = nums.length;
@@ -202,7 +196,6 @@ class Solution {
 ```java
 class Solution {
     public int maximumProfit(int prices[]) {
-        // code here
         List<Integer> sum = new ArrayList<>();
         
         int n = prices.length;
@@ -239,8 +232,7 @@ class Solution {
 ```java
 class Solution {
     public int maximumProfit(int prices[]) {
-        // Code here
-        
+
         int n = prices.length;
         int min = prices[0];
         int res = 0;
