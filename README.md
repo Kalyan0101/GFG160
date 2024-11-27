@@ -85,7 +85,6 @@ class Solution {
 
 ```java
 class Solution {
-    // Function to rotate an array by d elements in counter-clockwise direction.
     static void rotateArr(int arr[], int d) {
         
         int[] temp = new int[arr.length];
