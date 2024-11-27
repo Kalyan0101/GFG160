@@ -105,7 +105,7 @@ class Solution {
 ### [Next Permutation(Medium)](https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/next-permutation5226)
 
 ```java
-class Solution {
+public class Solution {
     void nextPermutation(int[] arr) {
 
         int n = arr.length;
