@@ -110,7 +110,8 @@ class Solution {
 ## Day 5
 ### [Next Permutation(Medium)](https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/next-permutation5226)
 
-```javaclass Solution {
+```java
+class Solution {
     void nextPermutation(int[] arr) {
         // code here
         
