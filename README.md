@@ -253,7 +253,14 @@ class Solution {
 ```
 ## Day 9
 ### [Minimize the Heights II](https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/minimize-the-heights3351)
+
+```
+Approach:    
+First: Need to sort the array, for this merge sort used O(logn) time complexity.
+Second: Compared between elements to find the minimize value as required.
+```
 ```java 
+
 class Solution {
     int getMinDiff(int[] arr, int k) {
 
