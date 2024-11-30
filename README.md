@@ -251,3 +251,77 @@ class Solution {
     }
 }
 ```
+## Day 9
+### [Minimize the Heights II](https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/minimize-the-heights3351)
+```java 
+class Solution {
+    int getMinDiff(int[] arr, int k) {
+
+        int n = arr.length;
+        int flag = 0;
+        int res = 0;
+        
+        merge(arr, 0, n-1);
+        
+        res = arr[n-1] - arr[0];
+        
+        for(int i = 1; i < n; i++){
+            
+            if(arr[i] - k < 0)
+                continue;
+            
+            int minH = Math.min( arr[0]+k, arr[i]-k );
+            int maxH = Math.max( arr[i-1]+k, arr[n-1]-k );
+            
+            res = Math.min(res, maxH-minH);
+        }
+        
+        return res;
+    }
+    
+    void merge(int arr[], int s, int e){
+
+        int m = (e+s) / 2;
+        
+        if(s < e){
+            merge(arr, s, m);
+            merge(arr, m+1, e);
+
+            sort(arr, s, e);
+        }
+    }
+    void sort(int[] arr, int s, int e){
+        int m = (e+s) / 2;
+        int len1 = (m-s) + 1;
+        int len2 = e - m;
+        int index = 0;
+
+        int L[] = new int[len1];
+        int R[] = new int[len2];
+        
+        for(int i = 0; i < len1; i++){
+            L[i] = arr[s+i];
+        }
+        for(int i = 0; i < len2; i++){
+            R[i] = arr[m+1+i];
+        }
+        
+        int i = 0, j = 0;
+        index = s;
+
+        while(i < len1 && j < len2){
+            if(L[i] < R[j]){
+                arr[index++] = L[i++];
+            }else{
+                arr[index++] = R[j++];
+            }
+        }
+        while (i < len1) {
+            arr[index++] = L[i++];
+        }
+        while (j < len2) {
+            arr[index++] = R[j++];
+        }
+    }
+}
+```
